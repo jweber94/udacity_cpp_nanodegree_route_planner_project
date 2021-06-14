@@ -1,5 +1,4 @@
 *.swp
-*.osm
 !map.osm
 *.o
 draw.cpp
