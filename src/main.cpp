@@ -74,6 +74,13 @@ int main(int argc, const char **argv)
     std::cin >> end_y;  
     std::cout << "\n"; // To tidy up the terminal output a little bit
 
+    // validity check of the user input
+    if((start_x < 0.f) || (start_y < 0.f) || (end_x > 100.f) || (end_y > 100.f))
+    {
+        std::cerr << "Input was out of the range 0 - 100. Please insert a valid input for all route planning parameters the next time.\n"; 
+        exit(0); 
+    }
+
     // Build Model.
     RouteModel model{osm_data};
 
