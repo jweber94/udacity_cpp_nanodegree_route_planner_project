@@ -20,6 +20,7 @@ class RouteModel : public Model {
 
         void FindNeighbors();
         float distance(Node other) const {
+            // calculate the eucledian distance from the current node to the "other" node (i.e. the aim node)
             return std::sqrt(std::pow((x - other.x), 2) + std::pow((y - other.y), 2));
         }
 
